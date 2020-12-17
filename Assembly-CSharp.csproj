@@ -58,7 +58,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\PlayerMove.cs" />
+     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\RandomVisitor.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>D:/dev/Strategy test/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>

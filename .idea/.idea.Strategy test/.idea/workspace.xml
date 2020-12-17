@@ -10,10 +10,15 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/RandomVisitor.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMove.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/RandomVisitor.cs" />
       </list>
     </option>
   </component>
@@ -36,6 +41,8 @@
       <option name="presentableId" value="Default" />
       <updated>1608230743607</updated>
       <workItem from="1608230770807" duration="759000" />
+      <workItem from="1608231910756" duration="4758000" />
+      <workItem from="1608238806120" duration="2322000" />
     </task>
     <servers />
   </component>
@@ -44,5 +51,11 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="616" y="173" width="672" height="676" key="search.everywhere.popup" timestamp="1608239625063">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="173" width="672" height="676" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1608239625063" />
   </component>
 </project>
