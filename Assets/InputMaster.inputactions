@@ -14,10 +14,18 @@
                     "interactions": ""
                 },
                 {
-                    "name": "Zoom",
+                    "name": "MouseZoom",
                     "type": "PassThrough",
                     "id": "abcb8af7-121c-4ec8-9749-47e9995c1a69",
                     "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "KeyBoardZoom",
+                    "type": "PassThrough",
+                    "id": "6ed67048-dca3-4d94-99cb-fa5b115dfe22",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
                 }
@@ -140,9 +148,42 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "MouseAndKeyboard",
-                    "action": "Zoom",
+                    "action": "MouseZoom",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "ed11e3f1-29e4-48c3-b83a-78076f85c577",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "KeyBoardZoom",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "c2bbde47-494c-43d4-8053-486675ff207a",
+                    "path": "<Keyboard>/equals",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "KeyBoardZoom",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "0fb051b0-875d-498b-a17f-0de8f5c3623e",
+                    "path": "<Keyboard>/minus",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "KeyBoardZoom",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 }
             ]
         }

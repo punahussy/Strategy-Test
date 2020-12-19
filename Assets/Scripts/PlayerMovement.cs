@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Composites;
 
 public class PlayerMovement : MonoBehaviour
 {
     public float MoveSpeed;
     public float ZoomStrenght;
     public float MinCameraHeight;
+    public float ZoomStep;
 
     private Vector2 _moveDirection;
 
@@ -17,10 +19,17 @@ public class PlayerMovement : MonoBehaviour
         Move(_moveDirection);
     }
 
-    public void OnZoom(InputAction.CallbackContext context)
+    public void OnMouseZoom(InputAction.CallbackContext context)
     {
         float zoomDistance = context.ReadValue<float>();
-        Zoom(zoomDistance);
+        Zoom(zoomDistance * ZoomStrenght);
+    }
+
+    public void OnKeyboardZoom(InputAction.CallbackContext context)
+    {
+        var sas = context.ReadValue<float>();
+        Debug.Log(sas);
+        Zoom(sas * ZoomStep);
     }
     
     private void Move(Vector2 direction)
@@ -28,16 +37,15 @@ public class PlayerMovement : MonoBehaviour
         float scaledMoveSpeed = MoveSpeed * Time.deltaTime;
         
         Vector3 moveDirection = new Vector3(direction.x, 0, direction.y);
-        transform.position += moveDirection * scaledMoveSpeed;
+        transform.Translate(moveDirection * scaledMoveSpeed);
     }
 
     private void Zoom(float distance)
     {
-        float finalZoomAmount = distance * ZoomStrenght;
-        Vector3 zoomVector = new Vector3(0, finalZoomAmount, 0);
+        Vector3 zoomVector = new Vector3(0, distance, 0);
         
         var nextCameraPos = transform.position + zoomVector;
-        if (nextCameraPos.y > MinCameraHeight || finalZoomAmount > 0)
+        if (nextCameraPos.y > MinCameraHeight || distance > 0)
             transform.position += zoomVector;
         else
             transform.position = new Vector3(transform.position.x, MinCameraHeight,transform.position.z);
