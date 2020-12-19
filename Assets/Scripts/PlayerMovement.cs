@@ -27,9 +27,8 @@ public class PlayerMovement : MonoBehaviour
 
     public void OnKeyboardZoom(InputAction.CallbackContext context)
     {
-        var sas = context.ReadValue<float>();
-        Debug.Log(sas);
-        Zoom(sas * ZoomStep);
+        var zoomModifier = context.ReadValue<float>();
+        Zoom(zoomModifier * ZoomStep);
     }
     
     private void Move(Vector2 direction)
@@ -46,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
         
         var nextCameraPos = transform.position + zoomVector;
         if (nextCameraPos.y > MinCameraHeight || distance > 0)
-            transform.position += zoomVector;
+            transform.position = nextCameraPos;
         else
             transform.position = new Vector3(transform.position.x, MinCameraHeight,transform.position.z);
     }

@@ -17,12 +17,20 @@ public class RandomVisitor : MonoBehaviour
         _deltaZ = Random.Range(-10f, 10f);
     }
 
+    private void Move()
+    {
+        _elapsedTime += Time.deltaTime;
+        Vector3 directionVector = new Vector3(_deltaX, 0, _deltaZ);
+        Quaternion lookRotation = Quaternion.LookRotation(directionVector);
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, lookRotation, VisitorSpeed);
+        transform.position += directionVector * (Time.deltaTime * VisitorSpeed); 
+    }
+
     private void Update()
     {
         if (_elapsedTime < MoveDuration && _move)
         {
-            _elapsedTime += Time.deltaTime;
-            transform.position += new Vector3(_deltaX, 0, _deltaZ) * (Time.deltaTime * VisitorSpeed);
+            Move();
         }
         else if (_move)
         {
