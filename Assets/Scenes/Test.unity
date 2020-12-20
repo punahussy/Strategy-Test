@@ -198,7 +198,7 @@ MonoBehaviour:
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 542057843}
-        m_MethodName: OnZoom
+        m_MethodName: OnMouseZoom
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
