@@ -186,6 +186,52 @@
                     "isPartOfComposite": true
                 }
             ]
+        },
+        {
+            "name": "Building",
+            "id": "784434ab-f183-4876-9826-8fa20f1589ed",
+            "actions": [
+                {
+                    "name": "ToggleBuildMode",
+                    "type": "Button",
+                    "id": "a01ec5d6-6c01-44d5-ac59-0365fcdb77f2",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Build",
+                    "type": "Button",
+                    "id": "b3f86551-9125-4bd8-b216-7c6dbe68b20d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "330e630b-205c-421f-a37d-4560cbc10593",
+                    "path": "<Keyboard>/b",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "MouseAndKeyboard",
+                    "action": "ToggleBuildMode",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "45b12e18-3016-42ec-b26b-dccc73c7a4eb",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "MouseAndKeyboard",
+                    "action": "Build",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [
